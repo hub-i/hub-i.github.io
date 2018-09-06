@@ -1,0 +1,19 @@
+
+https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
+
+
+Boostrap Themes
+따라서 실습하기
+- BS Theme "Company"
+- BS Theme "Band"
+
+HTML/CSS/Bootstrap 과제
+-취업을 위한 개발자 소개 페이지 작성
+- 부트스트랩 템플릿을 구해서 수정하여 완성
+- 검색어 : free booststrap 3 portfolio template
+
+강의주제 : Git/Github 사용법
+
+주교재
+검색어 : 누구나 쉽게 이해할 수 있는 Git 입문
+https://backlog.com/git-tutorial/kr/
