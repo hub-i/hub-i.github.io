@@ -1,8 +1,8 @@
-//List<Integer> list = new ArrayList<Integer>();
-List<Object> list = new ArrayList<Object>();
-list.add(1);
-list.add(new Integer(2));
-list.add("Hi");
+// //List<Integer> list = new ArrayList<Integer>();
+// List<Object> list = new ArrayList<Object>();
+// list.add(1);
+// list.add(new Integer(2));
+// list.add("Hi");  
 
 var ary = [];
 ary[0] =1;
