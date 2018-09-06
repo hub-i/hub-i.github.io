@@ -12,10 +12,10 @@ console.log(obj.key3);
 // console.log(obj."this is key4");에러가 난다.
 console.log(obj["this is key4"]);
 
-//var what = { 1 , 2 , 3};      //배열
-// console.log(what[0]);   //배열
-// var some ={"0":10}      //객체
-// console.log(some["0"]); //객체
+var what = [ 1 , 2 , 3];      //배열
+console.log(what[0]);   //배열
+var some ={"0":10}      //객체
+console.log(some["0"]); //객체
 
 var object = {
    a:10,
