@@ -62,3 +62,16 @@ console.log(arr);
 
 console.log("---------(revers())------------------");
 console.log(ret.reverse());
+
+console.log("---------(fill, map,delete)------------------");
+var arr = Array(10);
+arr.fill(5);
+console.log(arr);
+
+delete arr[2];
+console.log(arr);
+
+var ret = arr.map(x=>0);
+console.log(ret);
+console.log(arr);
+//table>thread>th>tr*3 탭 누르면 테이블 자동생성됨
