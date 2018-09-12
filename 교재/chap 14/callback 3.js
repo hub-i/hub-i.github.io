@@ -11,9 +11,10 @@ function sumAsync(start, end, cb) {
        existError = true;
      }
      if (existError) {
-       throw new Error('모든 코드는 비정상이 될 가능성이 있다.')
+       let e
+       //throw new Error('모든 코드는 비정상이 될 가능성이 있다.')
      } else {
-       cb(result);
+       cb(null,result);
      }
   },0);
 }

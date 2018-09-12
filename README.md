@@ -8,10 +8,11 @@
 - 자바공부 사이트 : https://www.zerocho.com/
 - 플레이 엔트리 : https://playentry.org/
 - 플래쉬게임 예제 : http://github.com/castello/javajungsuk3
-- 아이콘 모음 https://www.iconfinder.com 
+- 아이콘 모음 https://www.iconfinder.com
 - 강사들 사이트 http://www.nextree.co.kr/p6753/
-- 자바 기초 좋은예제들( 게임등) : http://ojs20022002.tistory.com/category/IT/JAVA 
-- 자바 프로젝트별 예제사이트 https://www.programcreek.com/ 
+- 자바 기초 좋은예제들( 게임등) : http://ojs20022002.tistory.com/category/IT/JAVA
+- 자바 프로젝트별 예제사이트 https://www.programcreek.com/
+- 안드로이드 스튜디오 강좌 : http://itlove.tistory.com/395?category=722301
 
 과제 : http://www.topcredu.com/
 
