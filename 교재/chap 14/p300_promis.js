@@ -14,13 +14,3 @@ function countdown(seconds) {
     }
  });
 }
-
-
-let promise = countdown(10);
-console.log(promise instanceof Promise);
-
-promise.then(function (result) {
-  console.log('result = ' + result);
-}).catch(function (error)){
-  console.log(error.message);
-});
