@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      //$('p').append('<sup>*</sup>');
+      $('h3').after('<hr>');
+      $('<sup>*</sup>').append('h3');
+      $('p').after('<hr>').before('<hr>');
+      //$('p').eq(2).html('<i>THIRD</i> PARAGRAPH REPLACED')
+    })
+
+    </script>
+  </head>
+  <body>
+    <h3>Example</h3>
+    <p>111</p>
+    <div class="">
+      <p>2<sup>3</sup></p>
+    </div>
+  </body>
+</html>

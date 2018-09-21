@@ -1,0 +1,35 @@
+<html>
+
+<head>
+  <title>preventDefault 예제</title>
+
+  <script type="text/javascript">
+    function stopDefAction(evt) {
+      if (!document.querySelector('#txt').value) {
+        // preventDefault는 클릭 이벤트 외에 
+        // 별도의 브라우저 행동을 막기 위해 사용됩니다.
+        evt.preventDefault();
+        
+        // return false from within a jQuery 
+        // event handler is effectively the same as calling both  
+        // e.preventDefault and e.stopPropagation
+        
+        // Note that this behaviour differs 
+        // from normal (non-jQuery) event handlers, 
+        // in which, notably, return false does not stop 
+        // the event from bubbling up.
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <form action="https://www.google.com/" onsubmit="stopDefAction(event)">
+    <input type="text" id="txt">
+    <button type="submit">SEND</button>
+  </form>
+
+</body>
+
+</html>

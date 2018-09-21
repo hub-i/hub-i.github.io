@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="light center jumbotron row">111</p>
+    <p name="second">222</p>
+    <p class="light">333</p>
+    <p id="unique" style="">444</p>
+
+    <script type="text/javascript">
+      // var elems = document.getElementsByTagName('p');
+      var elems = document.querySelectorAll('p');
+      for (var prop in elems) {
+        if (elems.hasOwnProperty(prop)) {
+          elems[prop].innerHTML = '777';
+        }
+      }
+      
+      // var elems = document.getElementsByClassName('light');
+      var elems = document.querySelectorAll('.light');
+      for (let elem of elems) {
+        elem.classList.add('blue');
+      }
+      
+      // var target = document.getElementById('unique');
+      var elems = document.querySelector('#unique');
+      
+    </script>
+  </body>
+</html>
+
+
+
+
+

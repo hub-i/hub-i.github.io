@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  
+  <!-- <script src="jquery-3.3.1.min.js" charset="utf-8"></script> -->
+  
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"
+  integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
+  crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+    $(function() {
+      // $('p:odd').css('color', 'red');
+      // $('p:even').css('color', 'blue');
+      
+      // $('h3').after('<hr>').append('<sup>*</sup>')
+      //   .filter(':odd').css('color', 'red');
+        
+      // $('h3').after('<hr>')
+      //   .not('.highlight').css('margin-left', '20px');
+      
+      // $('p').before('<hr>')
+      //   .find('.code').css('font-size', '30px');
+      
+      const para2 = $('h3').get(1); 
+      
+      // Monad Pattern
+      console.log($('h3') instanceof $); // true
+      console.log($('h3').get(1) instanceof $); // false
+      console.log($('h3').get(1) instanceof HTMLElement); // true
+    });
+  </script>
+</head>
+
+<body>
+
+  <h3>aaa</h3>
+  <h3 class="highlight">bbb</h3>
+  <h3>ccc</h3>
+  
+  <p>222</p>
+  <p>
+    333
+    <i class="code">444</i>
+    <makr>555</mark>
+  </p>
+  
+  <div class="blue">
+    <p>444</p>
+  </div>
+
+</body>
+
+</html>

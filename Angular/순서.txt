@@ -1,0 +1,32 @@
+
+
+1. git clone https://github.com/softcontext/angular-simple-demo
+
+2. 남의 것을 확인해볼때는 package.json를 가장먼저 확인
+
+dependencies
+(고객이 사용 :배포할때 필요)
+
+"devDependencies":
+개발자가 사용 : 배포할때 빠짐.
+
+------- (주요파일) -------------
+.angular-cli.json
+package.json
+tsconfig.json(종합테스트용화일)
+--------------
+tslint.json(스타일가이드)
+karma.conf.js(단일테스트)
+
+
+3. cd angular-simple-demo
+
+4. 노드가 필요 
+npm i (패키지 Json이 알아서 설치함)
+에러 날경우
+npm install -g @angular/cli 친후에
+
+5. npm start
+ng server 가 자동으로 실행
+
+6. http://localhost:4200/home

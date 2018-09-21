@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"
+integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
+crossorigin="anonymous"></script>
+<style media="screen">
+  .error {
+    border: 1px solid red;
+    padding: 10px;
+  }
+</style>
+
+  <body>
+
+    <div class = "container" >
+    <div class = "serverInfo" > </div>
+    <table>
+    <thead>
+    <tr>
+    <th> Id </th>
+    <th> Name </th>
+    <th> Job </th>
+    </tr >
+    </thead>
+    <tbody id = "target">
+    </tbody> </table > </div>
+
+    <script type = "text/javascript" >
+    var tbody = document.getElementById('target');
+
+  function renderTable(users) {
+    var html = '';
+    for (var i = 0; i < users.length; i++) {
+      var user = users[i];
+      html += `
+          <tr>
+            <td>${user.id}</td>
+            <td>${user.name}</td>
+            <td>${user.job}</td>
+          </tr>`
+    }
+    tbody.innerHTML = html;
+  }
+
+  function refreshServerInfo() {
+    // <div class="serverInfo"></div>
+    const $serverInfo = $('.serverInfo');
+
+    //제이쿼리가 제공하는 AJAX 기술 함수중에 하나
+    //객체.then : 객체가 then하는 코드를 보면 객체가 promise라고 생각하면된다.
+    $.get('http://localhost:3030/users').then(
+      function(data) { //성공콜백
+        console.log(data);
+      },
+      //파라미터 2개면 앞에것이 성공콜백, 두번째가 실패콜백이다.
+      function(jqXHR, textStatus, err) { //실패콜백
+        console.error(jqXHR);
+        console.error(textStatus);
+        console.error(err);
+
+        // <div class="serverInfo" class="error"></div>
+        $serverInfo.addClass('error')
+          .html('Error connecting to server.'); //.html : innerHTML과 같은 의미
+      }
+    );
+  }
+
+
+  }
+
+  refreshServerInfo();
+</script>
+
+</body>
+
+</html>

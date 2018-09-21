@@ -1,0 +1,4 @@
+var amanda_calculate = require('./amanda.js');
+var tyler_calculate = require('./tyler.js');
+console.log(amanda_calculate(1, 2, 5)); // logs 31
+console.log(tyler_calculate(2)); // logs 33.510321638291124

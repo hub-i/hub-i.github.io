@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    .highlight {
+      background: #ff0;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+
+<p id="x" data-myid="y"> 111</p> 
+<p>222 unique</p>
+<p>333</p>
+
+  <script type="text/javascript">
+    function highlightParas(containing) {
+      if (typeof containing === 'string'){      //방어코드 : 문자열일때만 받으라고 체크하는것
+        // 정적인 정규표현식을 동적으로 받은 파라미터인 문자열을 사용하여
+        // 정규표현식을 적용하기 위해서 new RegExp()방식으로 처리한다.
+        // hi xhix xxxhi
+        // \\b 경계를 표시하는 단어경계 메타 ( p363 참조)
+        containing = new RegExp(`\\b${containing}\\b`, 'i');
+      }
+
+          const paras = document.getElementsByTagName('p');
+          console.log(paras);
+      for (let p of paras) {
+        if (!containing.test(p.textContent)) continue;
+        p.classList.add('highlight');
+      }
+    }
+    highlightParas('unique');  //유니크 문자를 찾아줘
+
+    function removeParaHighlights() {
+      const paras = document.querySelectorAll('p.highlight');
+      for (let p of paras) {
+        p.classList.remove('highlight');
+      }
+    }
+  </script>
+</body>
+
+</html>

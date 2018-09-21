@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <style media="screen">
+    .done {
+      text-decoration: line-through;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>To-Do List</h3>
+      <div class="">
+        <label for="title">새 항목</label>
+        <input type="text" id="inputTitle" value="">
+        <button type="button" id="buttonAdd">추가</button>
+      </div>
+      <br>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Title</th>
+            <th>Menu</th>
+          </tr>
+        </thead>
+        <tbody id="target">
+        </tbody>
+      </table>
+    </div>
+    <script src="hw.js" charset="utf-8"></script>
+  </body>
+</html>

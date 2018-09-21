@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script src="hw.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      
+    </script>
+    
+    <style media="screen">
+      .true {
+        text-decoration: line-through;
+      }
+      h3 {
+        background-color: black;
+        color: white;
+        padding: 15px;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div class="container">
+      <h3>To-Do List</h3>
+      
+      <div class="">
+        <label for="title">할일입력</label>
+        <input type="text" id="inputTitle" value="">
+        <button type="button" id="buttonAdd" class="btn btn-success" onkeypress="Enter">추가</button>
+      </div>
+      
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Title</th>
+            <th>Menu</th>
+          </tr>
+        </thead>
+        <tbody id="target">
+          <!-- <tr>
+            <td>1</td>
+            <td id="id1">아내에게 선물 사주기</td>
+            <td>
+              <button type="button">완료</button>
+              <button type="button">삭제</button>
+            </td>
+          </tr> -->
+        </tbody>
+      </table>
+      
+    </div>
+    
+  </body>
+  
+  <script type="text/javascript">
+    var buttonAdd = document.getElementById('buttonAdd'); 
+    // 변수이름 :화면엘리먼트+취급값
+    var inputTitle = document.getElementById('inputTitle');
+    var target = document.getElementById('target');
+    
+    function buttonDone(id) {
+      // alert(id + ' Done');
+      // #A 함수 호출
+      // text-decoration: line-through;
+      doneTrue(id);
+      init();
+      // console.log(todos);
+    }
+    
+    function buttonDelete(id) {
+      // alert(id + ' Delete');
+      // #B 함수 호출
+      doneFalse(id);
+      init();
+      // console.log(todos);
+    }
+  
+    function init() {
+      var todos = getTodos();
+      var html = '';
+      target.innerHTML = '';
+      for (var i = 0; i < todos.length; i++) {
+        var todo = todos[i];
+        html =`
+        <tr class=${todo.done}>
+          <td>${todo.id}</td>
+          <td>${todo.title}</td>
+          <td>
+            <button type="button" onclick="buttonDone(${todo.id})">완료</button>
+            <button type="button" onclick="buttonDelete(${todo.id})">삭제</button>
+          </td>
+        </tr>
+        `;
+        target.innerHTML += html;
+      }
+    };
+    init();
+    
+    
+    buttonAdd.addEventListener('click', function () {
+      var title =  inputTitle.value;
+      // alert(title);
+      console.log(todos);
+      addTodo(title);
+      console.log(todos);
+      init();
+      inputTitle.value = '';
+    })
+  </script>
+  
+</html>

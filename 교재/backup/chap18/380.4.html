@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    body {
+      background-color: yellow;
+    }
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: silver;
+    }
+  </style>
+</head>
+
+<body onclick="clickBody()">
+
+  <div onclick="clickDiv(event)"></div>
+
+  <script type="text/javascript">
+    function clickBody() {
+      alert('clickBody');
+    }
+    
+    function clickDiv(e) {
+      console.log(e);
+      alert('clickDiv');
+      // stopPropagation 은 부모태그로의 이벤트 전파를 
+      // 중지하라는 의미입니다.
+      e.stopPropagation();
+    }
+  </script>
+  
+</body>
+
+</html>

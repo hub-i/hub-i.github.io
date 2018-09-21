@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="hw.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <h3>To-Do List</h3>
+      <div>
+        <label for="inputTitle">새 항목</label>
+        <input type="text" id= "inputTitle" value="">
+        <button type="button" id='buttonAdd'>추가</button>
+      </div>
+
+        <table>
+          <thread>
+            <tr>
+              <th>No</th>
+              <th>Title</th>
+              <th>Menu</th>
+            </tr>
+          </thread>
+        <tbody id="target">
+          <!-- <tr>
+            <td>1</td>
+            <td>아내에게 선물 사주기</td>
+            <td>
+              <button type="button">완료</button>
+              <button type="button">삭제</button>
+            </td>
+
+          </tr> -->
+        </tbody>
+    </div>
+    <script type="text/javascript">
+      var buttonAdd =document.getElementById('buttonAdd');
+      var inputTitle = document.getElementById('inputTitle');
+      var target = document.getElementById('target');
+
+      function buttonDone(id){
+        alert(id+'Done');
+        //#A 함수 호출
+      }
+
+      function buttonDelete(id){
+        var todos = getTodos();
+        var todo = todos;
+        //todo.slice(id);
+        target.innerHTML = todo.id;
+
+        //#B 함수 호출
+      }
+
+      function init(){
+        var todos = getTodos();
+
+        var html ='';
+        target.innerHTML = '';
+
+        for (var i = 0; i < todos.length; i++) {;
+          var todo = todos[i];
+          html =`
+          <tr>
+            <td>${todo.id}</td>
+            <td>${todo.title}</td>
+            <td>
+              <button type="button" onclick="buttonDone(${todo.id})">완료</button>
+              <button type="button" onclick="buttonDelete(${todo.id})">삭제</button>
+            </td>
+          </tr>
+          `;
+          target.innerHTML+= html;
+        }
+      }
+      init();
+
+      buttonAdd.addEventListener('click',function(){
+        var title = inputTitle.value;
+
+        //alert(title);
+        //console.log(todos);
+        addTodo(title);
+        //console.log(todos);
+        init();
+      })
+    </script>
+
+  </body>
+</html>

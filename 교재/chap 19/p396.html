@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+      <script src="jquery-3.3.1.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    const pTags = document.querySelectorAll('p');
+    // 관습적으로 jQuery 함수를 통해 획득한 엘리먼트 참조값을
+    // 취급하는 변수앞에 $기호를 붙인다.
+    const $paras = $('p');
+    console.log(pTags[0]===$paras[0]);
+
+    console.log($paras.length);
+
+    console.log($paras.length); // number of paragraph tags matched
+    console.log(typeof $paras); // "object"
+    console.log($paras instanceof HTMLCollection); // "object"
+    console.log(document.getElementsByTagName('p') instanceof HTMLCollection); // "object"
+
+    $paras instanceof $; // true
+    $paras instanceof jQuery; // true
+
+    const $newPara = $('<p>Newly created paragraph...</p>');
+    $('p').text('ALL PARAGRAPHS REPLACED');
+    $('p').html('<i>ALL</i> PARAGRAPHS REPLACED');
+    $('p') // matches all paragraphs
+     .eq(2) // third paragraph (zero-based indices)
+     .html('<i>THIRD</i> PARAGRAPH REPLACED');
+     $('p').remove();
+     $('p').append('<sup>*</sup>');
+     $('p').after('<hr>').before('<hr>');
+     $('<sup>*</sup>').appendTo('p'); // equivalent to $('p').append('<sup>*</sup>')
+     $('<hr>').insertBefore('p'); // equivalent to $('p').before('<hr>')
+     $('<hr>').insertAfter('p'); // equivalent to $('p').after('<hr>');
+     $('p').after('<hr>').not('.highlight').css('margin-left', '20px');
+
+
+
+
+
+
+
+
+  });
+
+  </script>
+</head>
+
+<body>
+  <h3>111</h3>
+  <p>222</p>
+  <div class="container">
+    <p>333</p>
+  </div>
+</body>
+
+</html>

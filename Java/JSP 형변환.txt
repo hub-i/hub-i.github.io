@@ -1,0 +1,32 @@
+1. int --> String 
+    int i = 2;
+    String s = Integer.toString(i);
+2. String -> int
+    String s = "1234";
+    int i = Integer.parseInt(s);
+3. double --> String 
+   double d = 2.34;
+    String s = Integer.toString(d);
+4. String --> double
+    String s = "2.34";
+    double d = Double.valueOf(s).doubleValue();
+5. float --> String
+    float  f = 0.234F;
+    String s = Float.toString(f);
+6. String --> float
+    String s = "0.234F";
+    float f = Float.valueOf(s).floatValue();
+7. long --> String
+    long l = 123456L;
+    String s = Long.toString(l);
+8. String --> long
+    String s = "123456";
+    long l = Long.parseLong(s);
+9. int --> 16
+    int i = 12;
+    String hex = Integer.toHexString(i);
+10. 16 --> int
+    String hex = "ABCD";
+    int i = Integer.parseInt(hex, 16);
+
+출처: http://imaxicool.tistory.com/321?category=250282 [쫄바지세상]

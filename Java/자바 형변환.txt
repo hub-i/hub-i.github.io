@@ -1,0 +1,88 @@
+자바 형변환 하기 java  
+ 
+1. 숫자를 문자열로 바꾸기
+   int i = 639;
+   String str = String.valueOf ( i );
+   String str = Integer.toString ( i );
+   String str = i.toString ( );
+
+2. 문자열을 숫자로 바꾸기
+   String str = "639";
+   int i = Integer.valueOf ( str ).intValue ( );
+   int i = Integer.parseInt ( str );
+   long i = Long.parseLong ( str )
+   double j = Double.valueOf ( str ).doubleValue ( );
+
+3. 기타 형변환
+   Float를 Integer로 바꾸기
+   float f = 3.25;
+   int i = ( int ) f;
+   double d = ( double ) i; // 플로트형
+   
+   Object를 int 타입으로 형변환 하기 ... 바로 안되므로 String으로 바꾼후 int로 형변환 한다.
+   Integer.parseInt ( vector.elementAt ( 0 ).toString () );
+
+
+숫자 --> 문자
+
+ 
+
+int i = 1234;
+
+String s = String.valueOf(i);
+
+String s = Integer.toString(i);
+
+String s = ""+i;
+
+String s = ""+12.34;
+
+String s = ""+0;
+
+ 
+
+문자 --> 숫자
+
+ 
+
+String str = "1234";
+
+int i = Integer.parseInt(str);
+
+long i = Long.paeseLong(str);
+
+double = Double.valueOf(str).doubleValue();
+
+Byte.parseByte(str);
+
+Short.parseShort(str);
+
+Integer.parseInteger(str);
+
+Long.parseLong(str);
+
+Float.parseFloat(str);
+
+Double.parseDouble(str);
+
+이클립스 환경 기반입니다.
+
+
+
+출처: http://imaxicool.tistory.com/320 [쫄바지세상]
+
+public class test02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 10;
+		int d = 20;
+		String b = "10";
+		String c = "10";
+		
+		System.out.println(a);
+		System.out.println(b.equals(c));
+		System.out.println(String.valueOf(a).equals(b));
+	}
+
+}

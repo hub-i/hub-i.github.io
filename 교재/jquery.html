@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+    //$('p:odd',p:'even').css().before().after().append().filter().
+    //참조 : https://api.jquery.com/
+
+    $(function(){
+      $('p:odd').css('color','red');  //odd : 홀수
+      $('p:even').css('color','blue');  //odd : 홀수
+      $('h3').after('<hr>').append('<sup>*</sup>').filter(':odd').css('color', 'red');
+      //$('h3').filter(':even').remove();
+      $('p').find('.code').css('color', 'blue');
+      $('div').find('.sup').css('color', 'blue');
+      //$('<hr>').insertBefore('p');
+      $('<br>').insertAfter('p');
+
+      //$('sup').remove();
+      //$('p').append('<sup>*</sup>');
+      //$('p').after('<hr>').before('<hr>');
+      //$('<sup>*</sup>').appendTo('p'); // equivalent to $('p').append('<sup>*</sup>')
+      //$('<hr>').insertBefore('p'); // equivalent to $('p').before('<hr>')
+      //$('<hr>').insertAfter('p'); // equivalent to $('p').after('<hr>');
+      //$('p').after('<hr>').not('.highlight').css('margin-left', '20px');
+    })
+
+    </script>
+  </head>
+  <body>
+    <h3>aaaa</h3>
+    <h3>bbb</h3>
+    <h3>ccc</h3>
+    <h3>dddd</h3>
+    <h3>eeeee</h3>
+    <p>22222</p>
+    <p>3333
+      <i class="code">ZzZ</i>
+    </p>
+    <div>
+      <p class="blue">44444</p>
+      <p>2<sup class="sup">3</sup></p>
+    </div>
+  </body>
+</html>

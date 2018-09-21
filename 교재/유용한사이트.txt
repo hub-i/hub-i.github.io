@@ -1,0 +1,16 @@
+﻿윈도우10 컴퓨터속도업
+https://mudnji.tistory.com/407
+윈도우10 서비스 관리
+http://rumorz.tistory.com/2
+
+
+자바스크립트 사이트
+http://js.do/
+
+정규표현식을 연습하는 사이트
+https://regexr.com/
+구글: mdn 정규표현식
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/%EC%A0%95%EA%B7%9C%EC%8B%9D
+
+Json서버예제:
+https://www.npmjs.com/package/json-server
